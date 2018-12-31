@@ -1,0 +1,4 @@
+访问地址: 访问 http://localhost:8080/ 后面跟具体的 controller 方法访问即可，例：http://localhost:8080/hi?name=张三
+Feign 集成 Hystrix 之后是通过接口+注解的方式实现断路器的功能
+Feign 默认集成了 Ribbon，并和 Eureka 结合默认实现了负载均衡的效果
+

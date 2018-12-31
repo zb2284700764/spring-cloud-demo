@@ -1,0 +1,9 @@
+根据 application 文件中的配置，在访问具体服务之前先访问 zuul ，通过 zuul 路由到对应的服务上
+
+# 所有以 /api-a 开头的请求都访问 ribbon-consumer 服务
+zuul.routes.api-a.path=/api-a/**
+zuul.routes.api-a.service-id=ribbon-consumer
+
+# 所有以 /api-b 开头的请求都访问 feign-consumer 服务
+zuul.routes.api-b.path=/api-b/**
+zuul.routes.api-b.service-id=feign-consumer

@@ -1,0 +1,6 @@
+配置服务的消费者
+
+在这里可以配合 bus + RibbonMQ + actuator(服务监控模块) 实现配置的动态刷新
+
+必须使用 post 的方式访问下面路径(restTemplate 暂时还没访问成功)
+http://localhost:8881/actuator/bus-refresh

@@ -1,0 +1,14 @@
+服务提供方: ribbon 实现的服务消费者就需要 http://localhost:8761/eureka/ 发现服务
+服务消费方: 可以直接访问 http://localhost:8762/ 后面跟具体的 controller 方法访问即可，例：http://localhost:8762/hi
+
+
+eureka 服务注册类信息可以参考 org.springframework.cloud.netflix.eureka.EurekaClientConfigBean 的源码配置
+这些配置信息都以 eureka.client 为前缀
+eureka 服务实例类信息可以参考 org.springframework.cloud.netflix.eureka.EurekaInstanceConfigBean 的源码配置
+这些配置信息都以 eureka.instance 为前缀
+
+服务提供者在服务启动的是会通过发送一个 rest 请求到 eureka service 中心，该请求带上了自身服务的一些元数据信息。Eureka service
+在接收到请求之后，会将服务的元数据信息储存在一个双层 map 中，第一层 map 的 key 是服务名，第二层的 key 是具体的服务实例名。
+在服务注册的时候需要设置 eureka.client.register-with-eureka=true 表示自动注册服务，默认为 true
+
+
