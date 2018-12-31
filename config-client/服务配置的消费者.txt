@@ -4,3 +4,8 @@
 
 必须使用 post 的方式访问下面路径(restTemplate 暂时还没访问成功)
 http://localhost:8881/actuator/bus-refresh
+
+刷新的时候还可以指定服务进行刷新，即使用"destination"参数
+比如  /actuator/bus-refresh?destination=customers:8881
+即刷新服务名为 customers 端口为 8881 的所有服务，端口 8882 的服务不刷新
+destination 后面指定要更新的实例的instance-id
