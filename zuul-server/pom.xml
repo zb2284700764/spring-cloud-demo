@@ -8,7 +8,7 @@
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <artifactId>zuul-service</artifactId>
+    <artifactId>zuul-server</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>zuul-service</name>
