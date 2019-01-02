@@ -44,6 +44,17 @@
             <optional>true</optional>
         </dependency>
         -->
+
+
+        <!-- 日志相关 -->
+        <!-- 日志接口的集合，不负责具体实现 slf4j-api -->
+
+        <!-- slf4j-api和log4j中间的适配器 slf4j-log4j12 -->
+
+        <!-- 具体的日志实现 -->
+
+        <!-- 日志相关 -->
+
     </dependencies>
 
     <dependencyManagement>
